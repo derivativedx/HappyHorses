@@ -1,0 +1,7 @@
+name: HorsePaths
+version: '${project.version}'
+main: com.perschmapples.horsepaths.Main
+api-version: 1.19
+authors: [ Derivative ]
+description: Horses move faster on set blocks. Either multiplicative or static speeds available.
+website: perschmapples.com
