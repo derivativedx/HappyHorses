@@ -57,7 +57,7 @@ public class HorseMoveEvent implements Listener
 
         Horse h = (Horse) e.getRightClicked();
         h.setTamed(true);
-        e.getPlayer().sendMessage(ChatColor.GOLD + "Horse " + ChatColor.BOLD + "LOVE " + ChatColor.GOLD + "golden apples!");
+        e.getPlayer().sendMessage(ChatColor.GOLD + "Horses " + ChatColor.BOLD + "LOVE " + ChatColor.GOLD + "golden apples!");
 
     }
 
