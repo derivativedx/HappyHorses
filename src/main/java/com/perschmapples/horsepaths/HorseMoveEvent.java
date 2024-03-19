@@ -40,9 +40,6 @@ public class HorseMoveEvent implements Listener
 //                e.getPlayer().getVehicle().setVelocity(new Vector(v.getX()*2,v.getY(),v.getZ()*2));
             }
         }
-
-
-
 //        e.getPlayer().sendMessage("x, z: " + e.getPlayer().getVehicle().getVelocity().getX() + ", " + e.getPlayer().getVehicle().getVelocity().getZ());
     }
 
