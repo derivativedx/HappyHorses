@@ -14,8 +14,6 @@ import org.bukkit.util.Vector;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class HorseMoveEvent implements Listener
 {
@@ -24,14 +22,16 @@ public class HorseMoveEvent implements Listener
     @EventHandler
     public void onHorseWalk(PlayerMoveEvent e)
     {
-        if(e.getPlayer().getVehicle() != null && e.getPlayer().getVehicle().getType().toString().contains("HORSE"))
+        if(e.getPlayer().getVehicle() == null) return;
+
+        if(e.getPlayer().getVehicle().getType().toString().contains("HORSE"))
         {
 //            e.getPlayer().sendMessage("BLOCK: " + e.getPlayer().getVehicle().getLocation().subtract(0, 1, 0).getBlock().getType());
             if(mmmmmmmlist.contains(e.getPlayer().getVehicle().getLocation().subtract(0, 1, 0).getBlock().getType()))
             {
                 Vector v = e.getPlayer()./*getVehicle().*/getVelocity();
 
-                double xz = 40;
+                double xz = 28;
                 double x = v.getX() * xz;
                 double y = v.getY() * 1.3;
                 double z = v.getZ() * xz;
@@ -40,6 +40,9 @@ public class HorseMoveEvent implements Listener
 //                e.getPlayer().getVehicle().setVelocity(new Vector(v.getX()*2,v.getY(),v.getZ()*2));
             }
         }
+
+
+
 //        e.getPlayer().sendMessage("x, z: " + e.getPlayer().getVehicle().getVelocity().getX() + ", " + e.getPlayer().getVehicle().getVelocity().getZ());
     }
 
